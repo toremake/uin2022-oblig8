@@ -5,7 +5,12 @@ div, aside, article, input, button, section, nav {
 
 html, body {
   font-family: "Zilla Slab", serif;
-  font-size: 18px;
+  font-size: 14px;
+}
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 18px;
+  }
 }
 
 h1, h2, h3 {

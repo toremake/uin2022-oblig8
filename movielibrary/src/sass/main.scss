@@ -1,6 +1,8 @@
 //External imports
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Zilla+Slab&display=swap');
 
+//Helpers and mixins
+@import "helpers/breakpoints";
 //Globals
 div, aside, article, input, button, section, nav {
     box-sizing: border-box;
@@ -14,7 +16,12 @@ $coffee: #826f66;
 
 html, body {
     font-family: 'Zilla Slab', serif;
-    font-size: 18px;
+    font-size: 14px;
+
+    //increase font-size base on larger screens:
+    @include bp('large') {
+        font-size: 18px;
+    }
 }
 
 h1, h2, h3 {
@@ -88,3 +95,6 @@ footer {
 
 //Components
 @import "components/actors";
+@import "components/movies";
+@import "components/actor-profile";
+@import "components/movie-profile";
