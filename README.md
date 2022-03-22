@@ -14,12 +14,12 @@ Laget med følgende packages: sass, concat, postcss-cli, autoprefixer, css-minif
 Bruker `npm run watch:sass` for prosess som sjekker og kompilerer endringer as-we-go, eller `npm run build` for å kjøre prosess manuelt etter endringer i sass-filene.
 
 ## Sass variabler og mixins/helpers
-Farger tilgjengelig: 
+Farger tilgjengelig (Stjålet uhemmet fra [colorhunt.co](https://colorhunt.co/palette/3a3845f7ccacc69b7b826f66)): 
 * $black (#3A3845)
 * $sand (#F7CCAC)
 * $brown (#C69B7B)
 * $coffee (#826F66)
 
-Stjålet uhemmet fra [colorhunt.co](https://colorhunt.co/palette/3a3845f7ccacc69b7b826f66)
+
 
 `@include bp(size)` brukes for å gjøre responsive endringer. CSS-struktur er bygget mobile-first, og endringer skjer etter skalering opp til større skjermer. Tilgjengelige størrelser for parameteren size er small (767px), medium (992px) og large (1200px). Mixin hentet fra [CSS-tricks.com](https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/)
