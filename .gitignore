@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/movielibrary/node_modules
+/movielibrary/.pnp
+/movielibrary.pnp.js
+
+# testing
+/movielibrary/coverage
+
+# production
+/movielibrary/build
+
+# misc
+/movielibrary.DS_Store
+/movielibrary.env.local
+/movielibrary.env.development.local
+/movielibrary.env.test.local
+/movielibrary.env.production.local
+
+/movielibrarynpm-debug.log*
+/movielibraryyarn-debug.log*
+/movielibraryyarn-error.log*
