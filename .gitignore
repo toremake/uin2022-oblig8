@@ -2,6 +2,8 @@
 
 # dependencies
 /movielibrary/node_modules
+/moviedatabase/node_modules 
+/node_modules
 /movielibrary/.pnp
 /movielibrary.pnp.js
 
@@ -12,12 +14,13 @@
 /movielibrary/build
 
 # misc
-/movielibrary.DS_Store
-/movielibrary.env.local
-/movielibrary.env.development.local
-/movielibrary.env.test.local
-/movielibrary.env.production.local
+/movielibrary/.DS_Store
+/movielibrary/.env.local
+/movielibrary/.env.development.local
+/movielibrary/.env.test.local
+/movielibrary/.env.production.local
 
-/movielibrarynpm-debug.log*
-/movielibraryyarn-debug.log*
-/movielibraryyarn-error.log*
+/movielibrary/npm-debug.log*
+/movielibrary/yarn-debug.log*
+/movielibrary/yarn-error.log*
+
