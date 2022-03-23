@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sanity/client": "^3.2.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
@@ -20,15 +21,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm-run-all compile:sass concat:css prefix:css compress:css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch:sass": "sass --watch src/sass/main.scss:src/css/MovieApp.css",
     "compile:sass": "sass src/sass/main.scss:src/css/MovieApp.css",
     "concat:css": "concat -o src/css/MovieApp.css src/css/normalize.css src/css/MovieApp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 3 versions\" src/css/MovieApp.css  -o src/css/MovieApp.css",
-    "compress:css": "css-minify -f src/css/MovieApp.css -o css",
-    "build": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "compress:css": "css-minify -f src/css/MovieApp.css -o css"
   },
   "eslintConfig": {
     "extends": [
