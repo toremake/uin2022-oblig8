@@ -17,6 +17,7 @@ export default function Movie({title, actor}) {
 
 
     console.log(movie.cast);
+    console.log(movie)
 
     
     return(
