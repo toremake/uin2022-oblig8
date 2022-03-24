@@ -3,14 +3,15 @@ import client from "../sanityclient";
 const moviesFields = `
     _id,
     title,
+    "poster": poster.asset->url,
     "slug": slug.current
 `
 
 const movieFields = `
     _id,
     title,
-    "slug": slug.current,
-    "cast": actors[].actors->full_name
+    "poster": poster.asset->url,
+    "slug": slug.current
 `
 
 export const getMovies = async () => {

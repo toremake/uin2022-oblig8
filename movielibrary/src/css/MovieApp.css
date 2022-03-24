@@ -29,6 +29,20 @@ header h1 {
   padding: 1rem;
   float: left;
 }
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+footer {
+  background: #826f66;
+  color: #f7ccac;
+  text-align: center;
+  padding: 1rem;
+}
+
 header nav {
   width: 100%;
   max-width: calc(100% - 320px);
@@ -63,17 +77,26 @@ header nav ul a:hover {
   color: #3a3845;
 }
 
-main {
+.profile-button {
   width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-footer {
-  background: #826f66;
-  color: #f7ccac;
-  text-align: center;
+  box-sizing: border-box;
   padding: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  background: #826f66;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f7ccac;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: ease-in-out 0.5s;
+}
+.profile-button:hover {
+  background: #3a3845;
+  color: #f7ccac;
 }
 
 #actors {
@@ -111,26 +134,41 @@ footer {
   margin-bottom: 0px;
   line-height: 1rem;
 }
-#actors .profile-button {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  background: #826f66;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f7ccac;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transition: ease-in-out 0.5s;
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-#actors .profile-button:hover {
-  background: #3a3845;
-  color: #f7ccac;
+#movies article {
+  flex-basis: 1;
+  max-width: 30%;
+  padding: 0;
+}
+#movies article figure {
+  max-width: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#movies article figure img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+#movies article figure h2 {
+  background: #fff;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0px;
+  left: 1rem;
+  z-index: 2;
+  margin-bottom: 0px;
+  line-height: 1rem;
 }
 
 /*# sourceMappingURL=MovieApp.css.map */

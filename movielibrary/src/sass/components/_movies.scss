@@ -1,0 +1,38 @@
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    article {
+        flex-basis: 1;
+        max-width: 30%;
+        padding: 0;
+
+        figure {
+            max-width: 100%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            display: block;
+            overflow: hidden;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            img {
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+            h2 {
+                background: #fff;
+                padding: 1rem;
+                position: absolute;
+                bottom: 0px;
+                left: 1rem;
+                z-index: 2;
+                margin-bottom: 0px;
+                line-height: 1rem;
+            }
+        }
+    }
+}
