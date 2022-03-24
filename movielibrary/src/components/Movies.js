@@ -18,11 +18,20 @@ export default function Movies() {
     return(
         <>
         <h1>Movie Library</h1>
-        <ul>
+        <section id="movies">
             {/* List movies from Sanity */}
-            {movieList?.map((movie) => (<li key={movie._id}><Link to={'/movies/' + movie.slug}>{movie.title}</Link></li>))}
+            {movieList?.map((movie) => (
+                <article key={movie?._id}>
+                    <figure>
+                    <img className="poster" src={movie.poster ? movie.poster : "https://via.placeholder.com/300x500.png?text=No+poster"} alt={movie?.title} />
+                    <h2>{movie?.title}</h2>
+                    </figure>
+                    <Link className="profile-button" to={'/movies/' + movie?.slug}>Se mer info</Link>
+
+                </article>
+            ))}
             {/*movieList?.map((movie) => (<li key={movie.id}>{movie.title}</li>))*/}
-        </ul>
+        </section>
         </>
     )
 }
