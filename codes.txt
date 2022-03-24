@@ -1,3 +1,7 @@
 Koder til Sanity-prosjekt for gruppe The Destructables, oblig 8:
 
-Ikke tilgjengelig enda.
+<<<<<<< HEAD
+projectId: 3zb9llz9
+=======
+
+>>>>>>> actors

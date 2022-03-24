@@ -1,0 +1,55 @@
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 0 1rem;
+
+    article {
+        flex-basis: 1;
+        padding: 0;
+        max-width: 100%;
+        @include bp(small) {
+            max-width: 48%;
+        }
+        @include bp(medium) {
+            max-width: 30%;
+        }
+        @include bp(larg) {
+            max-width: 22%;
+        }
+
+
+        figure {
+            max-width: 100%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            display: block;
+            overflow: hidden;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            img {
+                width: 100%;
+                position: relative;
+                z-index: 1;
+            }
+            h2 {
+                background: rgba(255,255,255,.8);
+                padding: 1rem;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                max-width: 80%;
+                z-index: 2;
+                margin-bottom: 0px;
+                line-height: 1.6rem;
+                border-top-right-radius: 5px;
+            }
+        }
+    }
+
+    .profile-button {
+        font-size: 1rem;
+    }
+}

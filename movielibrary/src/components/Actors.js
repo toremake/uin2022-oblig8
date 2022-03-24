@@ -27,7 +27,6 @@ export default function Actors() {
             <section id="actors">
                 {/* {actorList?.map((actor) => <article className="actor"><figure><img src="https://via.placeholder.com/400x300.png?text=Image+not+found" alt={actor.name} /><h2>{actor.name}</h2></figure><Link className="profile-button" to={"/actors/" + actor.name}>Se profil</Link></article>)} */}
                 {actorList?.map((actor) => <article className="actor"><figure><img src="https://via.placeholder.com/400x300.png?text=Image+not+found" alt={actor.name} /><h2>{actor.name}</h2></figure><Link className="profile-button" to={"/actors/" + actor.slug}>Se profil</Link></article>)} {/* Laget kun for test */}
-                
             </section>
         </>
     )

@@ -18,13 +18,31 @@ const movie = {
             }
         },
         {
+            title: "Poster",
+            type: "image",
+            name: "poster",
+            fields: [{
+                title: "Image source",
+                type: "string",
+                name: "image_source",
+                initialValue: "Vi har ikke lov til å bruke dette bildet: "
+            }]
+        },
+        {
             title: "Actors",
             type: "array",
             name: "actors",
             of: [
                 {
                     type: "reference",
-                    to: [{type: "actor"}]
+                    to: [{type: "actor",
+                    
+                    fieleds:[
+                    {
+                        type:'string',
+                        name:'actor',
+                        title:'Test'}
+                    ]}]
                 }
             ]
         }

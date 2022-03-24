@@ -1,6 +1,5 @@
 import client from "../sanityclient";
 
-//Usikker på om vi ønsker å skille actor og movie service? 
 const actorFields = `
 _id,
 full_name,
@@ -12,8 +11,8 @@ imageUrl,
 const actorsFields = `
 _id,
 full_name,
-profile_image,
-"slug": slug.current
+"slug": slug.current,
+"profile_image": profile_image.asset -> url
 `
 
 export const getActors = async () => {
@@ -30,4 +29,3 @@ export const getActor = async (slug) => {
       }{${actorFields}}`, {slug});
       return data;
 }
-
