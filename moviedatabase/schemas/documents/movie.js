@@ -35,7 +35,14 @@ const movie = {
             of: [
                 {
                     type: "reference",
-                    to: [{type: "actor"}]
+                    to: [{type: "actor",
+                    
+                    fieleds:[
+                    {
+                        type:'string',
+                        name:'actor',
+                        title:'Test'}
+                    ]}]
                 }
             ]
         }
