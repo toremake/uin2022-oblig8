@@ -11,7 +11,8 @@ const movieFields = `
     _id,
     title,
     "poster": poster.asset->url,
-    "slug": slug.current
+    "slug": slug.current,
+    "cast": *[_type == "actor" && _id in ^.actors[]._ref]{full_name, "slug": slug.current,"image": profile_image.asset->url}
 `
 
 export const getMovies = async () => {

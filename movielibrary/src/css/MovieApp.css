@@ -139,11 +139,22 @@ header nav ul a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  padding: 0 1rem;
 }
 #movies article {
   flex-basis: 1;
-  max-width: 30%;
   padding: 0;
+  max-width: 100%;
+}
+@media (min-width: 767px) {
+  #movies article {
+    max-width: 48%;
+  }
+}
+@media (min-width: 992px) {
+  #movies article {
+    max-width: 30%;
+  }
 }
 #movies article figure {
   max-width: 100%;
@@ -161,14 +172,69 @@ header nav ul a:hover {
   z-index: 1;
 }
 #movies article figure h2 {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   position: absolute;
   bottom: 0px;
-  left: 1rem;
+  left: 0px;
+  max-width: 80%;
   z-index: 2;
   margin-bottom: 0px;
-  line-height: 1rem;
+  line-height: 1.6rem;
+  border-top-right-radius: 5px;
+}
+#movies .profile-button {
+  font-size: 1rem;
+}
+
+#movie {
+  display: grid;
+  grid-template-columns: 50%, 50%;
+  grid-template-rows: auto;
+  grid-template-areas: "movie poster";
+  gap: 1rem;
+}
+#movie .moviemeta {
+  grid-area: movie;
+}
+#movie .poster {
+  grid-area: poster;
+}
+
+ul.cast {
+  list-style-type: none;
+  padding: 0;
+}
+ul.cast li {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+ul.cast li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-start;
+  align-items: center;
+  background: #f7ccac;
+  text-decoration: none;
+  color: #3a3845;
+  transition: ease-in-out 0.3s;
+}
+ul.cast li a:hover {
+  background: #826f66;
+  color: #f7ccac;
+}
+ul.cast li a:hover img {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.2);
+}
+ul.cast li img {
+  width: 80px;
+}
+ul.cast li span {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=MovieApp.css.map */
