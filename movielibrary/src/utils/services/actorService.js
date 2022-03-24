@@ -4,7 +4,7 @@ const actorFields = `
 _id,
 full_name,
 "slug": slug.current,
-"profile_image": profile_image.image_source
+"profile_image": profile_image.asset -> url
 `
 
 export const getActors = async () =>{
