@@ -54,6 +54,7 @@ footer {
     padding: 1rem;
 }
 
+@import "helpers/loader";
 //Components
 @import "components/navigation"; 
 @import "components/actors";
