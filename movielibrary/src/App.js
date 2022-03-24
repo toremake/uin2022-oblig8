@@ -10,16 +10,15 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-      <Route index element={<Movies />} />
-      <Route path="movies">
         <Route index element={<Movies />} />
-        <Route path=":slug" element={<Movie />} />
-      </Route>
-      <Route path="actors">
-        <Route index element={<Actors />} />
-        <Route path=":name" element={<Actor
-         />} />
-      </Route>
+        <Route path="movies">
+          <Route index element={<Movies />} />
+          <Route path=":slug" element={<Movie />} />
+        </Route>
+        <Route path="actors">
+          <Route index element={<Actors />} />
+          <Route path=":slug" element={<Actor />} />
+        </Route>
       </Route>
     </Routes>
   );

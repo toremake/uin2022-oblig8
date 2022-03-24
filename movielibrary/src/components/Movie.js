@@ -17,8 +17,7 @@ export default function Movie({title, actor}) {
 
     useEffect(() => {
         getTheMovie(slug);
-    }, [slug])
-    
+    }, [slug])    
     return(
         loading ? <Loaderellipsis /> : 
         <article id="movie">
