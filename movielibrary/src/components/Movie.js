@@ -15,9 +15,6 @@ export default function Movie({title, actor}) {
         getTheMovie(slug);
     }, [slug])
 
-
-    console.log(movie?.cast);
-
     
     return(
     <article id="movie">
