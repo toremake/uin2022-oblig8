@@ -1,13 +1,17 @@
 import {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import {getMovies} from '../utils/services/movieService'
+import Loaderellipsis from './Loaderellipsis'
 
 
 export default function Movies() {
     const [movieList, setMovieList] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const getAllMovies = async () => {
+        setLoading(true);
         const allMovies = await getMovies();
+        setLoading(false);
         setMovieList(allMovies);
     }
 
@@ -16,6 +20,7 @@ export default function Movies() {
     }, [])
 
     return(
+        loading ? <Loaderellipsis /> : 
         <>
         <h1>Movie Library</h1>
         <section id="movies">
@@ -30,7 +35,6 @@ export default function Movies() {
 
                 </article>
             ))}
-            {/*movieList?.map((movie) => (<li key={movie.id}>{movie.title}</li>))*/}
         </section>
         </>
     )
