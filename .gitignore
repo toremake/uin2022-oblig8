@@ -6,6 +6,8 @@
 /node_modules
 /movielibrary/.pnp
 /movielibrary.pnp.js
+/movielibrary/src/css/MovieApp.css
+/movielibrary/src/css/MovieApp.css.map
 
 # testing
 /movielibrary/coverage

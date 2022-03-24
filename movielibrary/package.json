@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "sass src/sass/main.scss:src/css/MovieApp.css && react-scripts start",
     "build": "npm-run-all compile:sass concat:css prefix:css compress:css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
