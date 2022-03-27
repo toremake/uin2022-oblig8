@@ -248,6 +248,57 @@ header nav ul a:hover {
   font-size: 1rem;
 }
 
+#actor {
+  display: grid;
+  grid-template-columns: 50%, 50%;
+  grid-template-rows: auto;
+  grid-template-areas: "movie poster";
+  gap: 1rem;
+}
+#actor .moviemeta {
+  grid-area: movie;
+}
+#actor .poster {
+  grid-area: poster;
+  width: 40vh;
+}
+
+ul.cast {
+  list-style-type: none;
+  padding: 0;
+}
+ul.cast li {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  margin-bottom: 1px;
+}
+ul.cast li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-start;
+  align-items: center;
+  background: #f7ccac;
+  text-decoration: none;
+  color: #3a3845;
+  transition: ease-in-out 0.3s;
+}
+ul.cast li a:hover {
+  background: #826f66;
+  color: #f7ccac;
+}
+ul.cast li a:hover img {
+  transition: ease-in-out 0.3s;
+  transform: scale(1.2);
+}
+ul.cast li img {
+  width: 80px;
+}
+ul.cast li span {
+  margin-left: 20px;
+}
+
 #movie {
   display: grid;
   grid-template-columns: 50%, 50%;
@@ -261,23 +312,6 @@ header nav ul a:hover {
 #movie .poster {
   grid-area: poster;
 }
-
-#actor {
-  display: grid;
-  grid-template-columns: 50%, 50%;
-  grid-template-rows: auto;
-  grid-template-areas: "movie poster";
-  gap: 1rem;
-}
-#actor .moviemeta {
-  grid-area: movie;
-}
-#actor .poster {
-  grid-area: poster;
-  height: 30vh;
-  
-}
-
 
 ul.cast {
   list-style-type: none;
