@@ -23,12 +23,11 @@ useEffect(() => {
 
 const name = actor?.full_name;
 
-console.log(actor)
 
 
 return(
     loading ? <Loaderellipsis /> : 
-    <article id="movie">
+    <article id="actor">
         <div className="moviemeta">
         <p><small><Link to="/actors">Actor Library</Link> > {name}</small></p>
         <h1>{name}</h1>
