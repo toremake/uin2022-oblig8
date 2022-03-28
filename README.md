@@ -32,7 +32,11 @@ Fordi vi satt opp referansen til skuespiller i movie-document-schemaet som en ar
     title,
     "poster": poster.asset->url,
     "slug": slug.current,
-    "cast": *[_type == "actor" && _id in ^.actors[]._ref]{full_name, "slug": slug.current,"image": profile_image.asset->url}
+    "cast": *[_type == "actor" && _id in ^.actors[]._ref]{
+            full_name, 
+            "slug": slug.current,
+            "image": profile_image.asset->url
+        }
 }',{slug}
 ```
 Hvor "cast"-feltet henter actors hvis _id befinner seg i parentens actors-arrays _ref-felt.
