@@ -181,7 +181,8 @@ header nav ul a:hover {
   border-top-right-radius: 5px;
 }
 #actors article figure img {
-  width: 100%;
+  width: auto;
+  height: 400px;
   position: relative;
   z-index: 1;
 }
@@ -228,7 +229,8 @@ header nav ul a:hover {
   border-top-right-radius: 5px;
 }
 #movies article figure img {
-  width: 100%;
+  width: auto;
+  height: 400px;
   position: relative;
   z-index: 1;
 }
