@@ -25,7 +25,7 @@ Farger tilgjengelig (Stjålet uhemmet fra [colorhunt.co](https://colorhunt.co/pa
 # Sanity-GROQ-challenge
 Oppgaven spør ikke etter dette (siden det var en rotete jobb), men vi la også inn en "reversert referanse"-spørring, slik at vi kan vise alle skuespillere som er referert i en film, og alle filmer en skuespiller har spilt i.
 
-Fordi vi satt opp referansen til skuespiller i movie-document-schemaet som en array med referanser, måtte vi grave lenge for å finne en spørring som klarte å returnere en fornuftig array med skuespiller-objekter når vi hentet en film. Etter mange timers prøving fant vi løsningen med følgende GROQ:
+Fordi vi satt opp referansen til skuespiller i movie-document-schemaet som en array med referanser, måtte vi grave lenge for å finne en spørring som klarte å returnere en fornuftig array med skuespiller-objekter når vi hentet en bestemt film (basert på filmens slug). Etter mange timers prøving fant vi løsningen med følgende GROQ:
 ```
 ^'*[_type == "movie" && slug.current == $slug]{
     _id,
