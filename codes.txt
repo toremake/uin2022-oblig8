@@ -1,7 +1,7 @@
 Koder til Sanity-prosjekt for gruppe The Destructables, oblig 8:
 
-<<<<<<< HEAD
-projectId: 3zb9llz9
-=======
+REACT_APP_SANITY_PROJECT_ID=3zb9llz9
+REACT_APP_SANITY_DATASET_NAME=production
 
->>>>>>> actors
+
+
